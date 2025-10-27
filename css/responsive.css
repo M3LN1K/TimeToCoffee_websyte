@@ -303,9 +303,9 @@
     }
 }
 
-/* Video Hero Responsive */
+/* Отзывчивое главное видео */
 
-/* Video Hero Responsive for 16:9 */
+/* Отзывчивое главное видео для 16:9 */
 @media (max-width: 1024px) {
     .video-container-16-9 {
         padding-bottom: 75%; /* Немного изменяем соотношение на планшетах */
@@ -423,7 +423,7 @@
     }
 }
 
-/* Reduced motion support */
+/* Поддержка уменьшенного движения */
 @media (prefers-reduced-motion: reduce) {
     .video-background video {
         display: none;
@@ -435,7 +435,7 @@
     }
 }
 
-/* Loading state for video */
+/* Состояние загрузки видео */
 .video-loading {
     opacity: 0.5;
 }
