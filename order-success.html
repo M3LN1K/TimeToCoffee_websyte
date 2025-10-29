@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ принят - TimeToCoffe</title>
+    <meta name="description" content="Заказ успешно оформлен">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-mug-hot"></i>
+                    TimeTo<span>Coffe</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#history">История</a></li>
+                        <li><a href="index.html#features">Особенности</a></li>
+                        <li><a href="index.html#events">Мероприятия</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="order-success">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Заказ принят!</h1>
+                <p>Спасибо за ваш заказ. Мы свяжемся с вами в ближайшее время для подтверждения.</p>
+                <p id="order-details" style="font-weight: 600; color: var(--primary-color); margin: 1rem 0;"></p>
+                <div class="success-actions">
+                    <a href="menu.html" class="btn btn-primary">
+                        <i class="fas fa-utensils"></i> Сделать новый заказ
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> На главную
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Тот же footer -->
+    </footer>
+
+    <script>
+        // Показываем детали заказа из URL параметров
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('order_id');
+            
+            if (orderId) {
+                const orderDetails = document.getElementById('order-details');
+                orderDetails.textContent = `Номер вашего заказа: #${orderId}`;
+            }
+        });
+    </script>
+</body>
+</html>

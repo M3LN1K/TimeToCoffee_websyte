@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - TimeToCoffe</title>
+    <meta name="description" content="Меню кофейни TimeToCoffe - кофе, десерты, напитки в японском стиле">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/menu.css">
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-mug-hot"></i>
+                    TimeTo<span>Coffe</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Открыть меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#history">История</a></li>
+                        <li><a href="index.html#features">Особенности</a></li>
+                        <li><a href="index.html#events">Мероприятия</a></li>
+                        <li><a href="menu.html" class="active">Меню</a></li>
+                        <li><a href="index.html#app">Приложение</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                        <li><a href="index.html#booking" class="btn btn-primary">Забронировать</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Menu Section -->
+    <section class="menu-hero">
+        <!-- Фоновое изображение -->
+        <div class="menu-hero-bg">
+            <img src="images/menu/menu_poster.jpeg" alt="Кофейня TimeToCoffe" loading="eager">
+            <div class="menu-hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1>Наше меню</h1>
+                <p>Откройте для себя уникальные вкусы кофе и десертов, созданные под влиянием японской культуры и современных кофейных традиций</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <section class="menu-nav">
+        <div class="container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Все позиции</button>
+                <button class="category-btn" data-category="coffee">Кофе</button>
+                <button class="category-btn" data-category="tea">Чай</button>
+                <button class="category-btn" data-category="desserts">Десерты</button>
+                <button class="category-btn" data-category="special">Специальные предложения</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <div class="container">
+            <div class="menu-grid" id="menu-grid">
+                <!-- Кофе -->
+                <div class="menu-item" data-category="coffee" data-popular="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/japanese-latte.jpeg" alt="Японский латте" loading="lazy">
+                        <div class="menu-badge popular">Популярное</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Японский латте</h3>
+                            <span class="price">350₽</span>
+                        </div>
+                        <p class="description">Нежный латте с добавлением матча и ванильного сиропа, украшенный сакурой</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">180 ккал</span>
+                            <span class="volume">350 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Японский латте" data-price="350">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="images/menu/sakura-espresso.jpeg" alt="Эспрессо Сакура" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Эспрессо Сакура</h3>
+                            <span class="price">280₽</span>
+                        </div>
+                        <p class="description">Классический эспрессо из смеси японских и эфиопских зерен с цветочными нотами</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">5 ккал</span>
+                            <span class="volume">30 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Эспрессо Сакура" data-price="280">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee" data-vegan="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/kyoto-cappuccino.jpeg" alt="Киотский капучино" loading="lazy">
+                        <div class="menu-badge vegan">Веган</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Киотский капучино</h3>
+                            <span class="price">320₽</span>
+                        </div>
+                        <p class="description">Капучино на миндальном молоке с кокосовыми сливками и тонкими специями</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">120 ккал</span>
+                            <span class="volume">250 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Киотский капучино" data-price="320">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee" data-popular="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/matcha-latte.jpeg" alt="Матча латте" loading="lazy">
+                        <div class="menu-badge popular">Популярное</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Матча латте</h3>
+                            <span class="price">380₽</span>
+                        </div>
+                        <p class="description">Традиционный японский чай матча с молоком и медовым сиропом</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">90 ккал</span>
+                            <span class="volume">300 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Матча латте" data-price="380">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Чай -->
+                <div class="menu-item" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="images/menu/cherry-blossom-tea.jpeg" alt="Чай Цветение Сакуры" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Чай Цветение Сакуры</h3>
+                            <span class="price">290₽</span>
+                        </div>
+                        <p class="description">Зеленый чай с лепестками сакуры и тонкими цветочными ароматами</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">15 ккал</span>
+                            <span class="volume">400 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Чай Цветение Сакуры" data-price="290">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="tea" data-vegan="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/ginger-honey-tea.jpeg" alt="Имбирный чай с медом" loading="lazy">
+                        <div class="menu-badge vegan">Веган</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Имбирный чай с медом</h3>
+                            <span class="price">270₽</span>
+                        </div>
+                        <p class="description">Согревающий чай со свежим имбирем, медом и лимоном</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">45 ккал</span>
+                            <span class="volume">350 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Имбирный чай с медом" data-price="270">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Десерты -->
+                <div class="menu-item" data-category="desserts" data-popular="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/matcha-tiramisu.jpeg" alt="Матча тирамису" loading="lazy">
+                        <div class="menu-badge popular">Популярное</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Матча тирамису</h3>
+                            <span class="price">420₽</span>
+                        </div>
+                        <p class="description">Классический тирамису с японским акцентом - матча вместо кофе</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">320 ккал</span>
+                            <span class="weight">120 г</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Матча тирамису" data-price="420">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/menu/dorayaki.jpeg" alt="Дораяки" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Дораяки</h3>
+                            <span class="price">380₽</span>
+                        </div>
+                        <p class="description">Традиционные японские блинчики с начинкой из красной фасоли</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">280 ккал</span>
+                            <span class="weight">150 г</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Дораяки" data-price="380">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-vegan="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/vegan-mochi.jpeg" alt="Веган моти" loading="lazy">
+                        <div class="menu-badge vegan">Веган</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Веган моти</h3>
+                            <span class="price">340₽</span>
+                        </div>
+                        <p class="description">Японские сладости из рисовой муки с начинкой из фруктового пюре</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">150 ккал</span>
+                            <span class="weight">80 г</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Веган моти" data-price="340">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Специальные предложения -->
+                <div class="menu-item" data-category="special" data-new="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/sakura-cocktail.jpeg" alt="Коктейль Сакура" loading="lazy">
+                        <div class="menu-badge new">Новинка</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Коктейль Сакура</h3>
+                            <span class="price">450₽</span>
+                        </div>
+                        <p class="description">Освежающий безалкогольный коктейль с тоником, сиропом сакуры и лаймом</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">80 ккал</span>
+                            <span class="volume">400 мл</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Коктейль Сакура" data-price="450">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="special">
+                    <div class="menu-item-image">
+                        <img src="images/menu/coffee-tasting-set.jpeg" alt="Кофейный сет" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Кофейный сет</h3>
+                            <span class="price">890₽</span>
+                        </div>
+                        <p class="description">Дегустационный набор: эспрессо, американо, капучино и латте с десертом на выбор</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">250 ккал</span>
+                            <span class="info">4 напитка + десерт</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Кофейный сет" data-price="890">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="special" data-new="true">
+                    <div class="menu-item-image">
+                        <img src="images/menu/japanese-breakfast.jpeg" alt="Японский завтрак" loading="lazy">
+                        <div class="menu-badge new">Новинка</div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Японский завтрак</h3>
+                            <span class="price">650₽</span>
+                        </div>
+                        <p class="description">Традиционный завтрак: рис, мисо-суп, рыба, тофу и овощи с зеленым чаем</p>
+                        <div class="menu-item-meta">
+                            <span class="calories">420 ккал</span>
+                            <span class="info">полный набор</span>
+                        </div>
+                        <button class="btn-add-to-cart" data-item="Японский завтрак" data-price="650">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Ваш заказ</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Товары будут добавляться сюда -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cart-total">0₽</span>
+            </div>
+            <button class="btn btn-primary btn-checkout" id="checkout-btn">
+                Оформить заказ
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Button -->
+    <div class="cart-floating-btn" id="cart-floating-btn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Тот же футер что и на главной странице -->
+    </footer>
+
+    <!-- Кнопка помощника -->
+    <div id="deepseek-assistant-btn" class="deepseek-btn">
+    <span>🤖</span>
+    </div>
+
+    <!-- Окно чата -->
+    <div id="deepseek-chat-window" class="deepseek-chat hidden">
+    <div class="chat-header">
+        <h3>TimeTo Coffee Помощник</h3>
+        <button id="close-chat" class="close-btn">×</button>
+    </div>
+    
+    <div id="chat-messages" class="chat-messages">
+            <div class="message assistant">
+                <strong>Помощник:</strong> Привет! Я ваш помощник из кофейни TimeTo Coffee. 
+                Могу рассказать о меню, мероприятиях или помочь с бронированием! ☕
+            </div>
+            <div style="margin-bottom: 8px; font-size: 12px; color: #666;">Быстрые вопросы (точные ответы):</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                <button class="quick-btn" onclick="sendQuickQuestion('меню')">Меню</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('часы работы')">Часы работы</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('адрес')">Адрес</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('бронирование')">Бронирование</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('мероприятия')">Мероприятия</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('доставка')">Доставка</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('кофе')">О кофе</button>
+                <button class="quick-btn" onclick="sendQuickQuestion('япония')">Япония</button>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Задайте вопрос о кофе, меню или бронировании...">
+            <button id="send-btn">Отправить</button>
+        </div>
+        
+        <div class="chat-footer">
+            <small>Powered by DeepSeek AI</small>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="js/ai-brain.js"></script>
+    <!--<script src="js/ai-module.js"></script> -->
+    <!--<script src="js/mobile-menu.js"></script>-->
+    <script src="js/menu.js"></script>
+</body>
+</html>
